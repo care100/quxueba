@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	ul
+		each school in schools
+			li #{school.name}
+				p= school.user.username
+				p= school.address
+

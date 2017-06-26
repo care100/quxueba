@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	ul
+		each kid in kids
+			li #{kid.name}
+				p= kid.sex
+				p= kid.birthdate

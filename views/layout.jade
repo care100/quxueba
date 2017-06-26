@@ -1,0 +1,18 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+
+		div
+			p= session.user
+			if (session.user)
+				span= session.user.username
+				span #{session.user.type === 1 ? 'guardian' : 'school'}
+				div
+					a(href='/logout') Logout
+			else
+				a(href='/login') Login
+
+		block content
